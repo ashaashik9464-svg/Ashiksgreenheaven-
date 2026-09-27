@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ashik's Green Heaven | আমার সবুজ পৃথিবী</title>
+
+    <meta name="description"
+          content="Ashik's Green Heaven — ফলের গাছ, ফুলের গাছ, Indoor Plants এবং ছাদ বাগান নিয়ে আমার ছোট্ট সবুজ পৃথিবী।">
+
+    <meta name="keywords"
+          content="Ashik's Green Heaven, ছাদ বাগান, ফলের গাছ, ফুলের গাছ, Indoor Plants, Miyazaki Mango, Katimon Mango">
+
+    <style>
+
+        /* =========================
+           BASIC RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Noto Sans Bengali", "Nirmala UI", Arial, sans-serif;
+            background: #f5fff7;
+            color: #18351f;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7, 54, 28, 0.96);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 3px 20px rgba(0,0,0,0.15);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 14px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #8cff9c;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 18px;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8cff9c;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            background:
+                linear-gradient(rgba(2,40,18,0.70), rgba(2,40,18,0.72)),
+                url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1800&q=85")
+                center/cover;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            color: white;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 7px 18px;
+            border: 1px solid rgba(255,255,255,0.5);
+            border-radius: 50px;
+            margin-bottom: 20px;
+            background: rgba(255,255,255,0.10);
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 78px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #8cff9c;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: auto;
+            color: #eaffed;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-green {
+            background: #69d779;
+            color: #07361c;
+        }
+
+        .btn-green:hover {
+            transform: translateY(-3px);
+            background: #8cff9c;
+        }
+
+        .btn-outline {
+            color: white;
+            border: 1px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #07361c;
+        }
+
+        /* =========================
+           COMMON SECTION
+        ========================== */
+
+        section {
+            padding: 85px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 50px;
+        }
+
+        .section-title small {
+            color: #279640;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(30px, 5vw, 46px);
+            margin: 8px 0 12px;
+            color: #123e21;
+        }
+
+        .section-title p {
+            color: #5b7061;
+        }
+
+        /* =========================
+           PREMIUM PLANTS
+        ========================== */
+
+        .premium {
+            background: #edf9ef;
+        }
+
+        .plant-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+            gap: 25px;
+        }
+
+        .plant-card {
+            background: white;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(23,85,39,0.10);
+            transition: 0.35s;
+            border: 1px solid #e2f1e5;
+        }
+
+        .plant-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(23,85,39,0.18);
+        }
+
+        .plant-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 22px;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 12px;
+            padding: 4px 10px;
+            background: #e5f8e8;
+            color: #23813a;
+            border-radius: 20px;
+            font-weight: 700;
+            margin-bottom: 9px;
+        }
+
+        .card-content h3 {
+            color: #123e21;
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .card-content p {
+            color: #647268;
+            font-size: 14px;
+        }
+
+        /* =========================
+           FRUIT PLANTS
+        ========================== */
+
+        .fruit-section {
+            background: white;
+        }
+
+        /* =========================
+           FLOWER PLANTS
+        ========================== */
+
+        .flower-section {
+            background: #fffafc;
+        }
+
+        .flower-card {
+            text-align: center;
+        }
+
+        .flower-card img {
+            height: 230px;
+        }
+
+        /* =========================
+           INDOOR PLANTS
+        ========================== */
+
+        .indoor-section {
+            background: #f0faf3;
+        }
+
+        /* =========================
+           GARDEN
+        ========================== */
+
+        .garden {
+            background:
+                linear-gradient(rgba(4,46,20,0.75), rgba(4,46,20,0.78)),
+                url("https://images.unsplash.com/photo-1599685315640-6f1b6c3b9e4e?auto=format&fit=crop&w=1800&q=85")
+                center/cover;
+            color: white;
+        }
+
+        .garden-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .garden h2 {
+            font-size: clamp(32px, 5vw, 50px);
+            margin-bottom: 20px;
+        }
+
+        .garden p {
+            color: #e3f5e7;
+            font-size: 17px;
+        }
+
+        /* =========================
+           TIPS
+        ========================== */
+
+        .tips {
+            background: white;
+        }
+
+        .tips-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+        }
+
+        .tip {
+            padding: 27px;
+            border-radius: 20px;
+            background: #f3fbf5;
+            border: 1px solid #dfefe2;
+        }
+
+        .tip-icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .tip h3 {
+            margin-bottom: 8px;
+            color: #174c27;
+        }
+
+        .tip p {
+            color: #607166;
+            font-size: 14px;
+        }
+
+        /* =========================
+           ABOUT ME
+        ========================== */
+
+        .about {
+            background: #eaf7ed;
+        }
+
+        .about-box {
+            max-width: 1050px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+        }
+
+        .about-text h2 {
+            font-size: 42px;
+            color: #123e21;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            color: #526559;
+            margin-bottom: 14px;
+        }
+
+        .heart-text {
+            padding: 18px;
+            border-left: 4px solid #42b85b;
+            background: white;
+            border-radius: 10px;
+            margin-top: 20px;
+            color: #31543a;
+        }
+
+        /* =========================
+           YOUTUBE
+        ========================== */
+
+        .youtube {
+            background: #092d18;
+            color: white;
+            text-align: center;
+        }
+
+        .youtube h2 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .youtube p {
+            color: #cde7d3;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .youtube-btn {
+            display: inline-block;
+            margin-top: 28px;
+            background: #ff3b30;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 800;
+            transition: 0.3s;
+        }
+
+        .youtube-btn:hover {
+            transform: scale(1.04);
+            background: #ff5148;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #041a0c;
+            color: #bcd5c3;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        .footer-line {
+            margin-top: 18px;
+            color: #718878;
+            font-size: 13px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 800px) {
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                gap: 11px;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .about-box {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image img {
+                height: 350px;
+            }
+
+            section {
+                padding: 65px 16px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .about-text h2 {
+                font-size: 32px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="#home" class="logo">
+            Ashik's <span>Green Heaven</span>
+        </a>
+
+        <ul class="nav-links">
+
+            <li><a href="#home">হোম</a></li>
+            <li><a href="#premium">প্রিমিয়াম গাছ</a></li>
+            <li><a href="#fruits">ফলের গাছ</a></li>
+            <li><a href="#flowers">ফুলের গাছ</a></li>
+            <li><a href="#indoor">ইনডোর গাছ</a></li>
+            <li><a href="#tips">টিপস</a></li>
+            <li><a href="#about">আমার সম্পর্কে</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            🌿 প্রকৃতির সঙ্গে আমার ছোট্ট যাত্রা
+        </div>
+
+        <h1>
+            Welcome to<br>
+            <span>Ashik's Green Heaven</span>
+        </h1>
+
+        <p>
+            গাছপালা, ফল, ফুল আর প্রকৃতিকে ভালোবেসে
+            তৈরি করা আমার ছোট্ট সবুজ পৃথিবী।
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#premium" class="btn btn-green">
+                🌱 গাছগুলো দেখুন
+            </a>
+
+            <a href="#about" class="btn btn-outline">
+                ❤️ আমার সম্পর্কে
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PREMIUM FRUIT PLANTS
+========================== -->
+
+<section class="premium" id="premium">
+
+    <div class="section-title">
+
+        <small>Premium Collection</small>
+
+        <h2>💎 Premium Fruit Plants</h2>
+
+        <p>
+            আমার বাগানের কিছু বিশেষ ও জনপ্রিয় ফলের গাছ।
+        </p>
+
+    </div>
+
+
+    <div class="plant-grid">
+
+
+        <!-- MIYAZAKI -->
+
+        <div class="plant-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=900&q=85"
+            alt="আম গাছ">
+
+            <div class="card-content">
+
+                <span class="tag">Premium Mango</span>
+
+                <h3>🥭 Miyazaki Mango Tree</h3>
+
+                <p>
+                    জাপানের বিখ্যাত Miyazaki mango-এর জন্য
+                    পরিচিত একটি premium mango variety।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- KATIMON -->
+
+        <div class="plant-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1605027990121-cbae9e0642df?auto=format&fit=crop&w=900&q=85"
+            alt="কাটিমন আম">
+
+            <div class="card-content">
+
+                <span class="tag">Special Mango</span>
+
+                <h3>🥭 Katimon Mango Tree</h3>
+
+                <p>
+                    বারোমাসি ফলনের জন্য জনপ্রিয় কাটিমন
+                    আমের গাছ।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHAKAPAT -->
+
+        <div class="plant-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1582979512210-99b6a53386f9?auto=format&fit=crop&w=900&q=85"
+            alt="আম গাছ">
+
+            <div class="card-content">
+
+                <span class="tag">Rare Collection</span>
+
+                <h3>🥭 Kings of Chakapat Mango</h3>
+
+                <p>
+                    বিশেষ ধরনের Chakapat mango collection-এর
+                    একটি আকর্ষণীয় গাছ।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- DRAGON FRUIT -->
+
+        <div class="plant-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=900&q=85"
+            alt="ড্রাগন ফল">
+
+            <div class="card-content">
+
+                <span class="tag">Exotic Fruit</span>
+
+                <h3>🐉 Dragon Fruit Plant</h3>
+
+                <p>
+                    বাড়ির ছাদ বাগানেও যত্ন নিয়ে চাষ করা যায়
+                    exotic dragon fruit plant।
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FRUIT PLANTS
+========================== -->
+
+<section class="fruit-section" id="fruits">
+
+    <div class="section-title">
+
+        <small>Fruit Garden</small>
+
+        <h2>🍎 আমার ফলের গাছের সংগ্রহ</h2>
+
+        <p>
+            দেশি-বিদেশি নানা ধরনের ফলের গাছ নিয়ে আমার
+            ছোট্ট সবুজ collection।
+        </p>
+
+    </div>
+
+
+    <div class="plant-grid">
+
+
+        <div class="plant-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1591073113125-e46713c829ed?auto=format&fit=crop&w=900&q=85"
+            alt="লেবু গাছ">
+
+            <div class="card-content">
+
+                <span class="tag">Citrus</span>
+
+                <h3>🍋 লেবু গাছ</h3>
+
+                <p>
+                    পতি লেবু, কমলা লেবু সহ বিভিন্ন citrus গাছ।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="plant-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1603833665858-e61d17a86224?auto=format&fit=crop&w=900&q=85"
+            alt="ডালিম">
+
+            <div class="card-content">
+
+                <span class="tag">Fruit Plant</span>
+
+                <h3>🍎 ডালিম গাছ</h3>
+
+                <p>
+                    সুন্দর ফুল ও সুস্বাদু ফলের জন্য পরিচিত।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="plant-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=85"
+            alt="কলা গাছ">
+
+            <div class="card-content">
+
+                <span class="tag">Tropical Fruit</span>
+
+                <h3>🍌 কলা গাছ</h3>
+
+                <p>
+                    সহজে বেড়ে ওঠা জনপ্রিয় tropical fruit plant।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="plant-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1599586120429-48281b6f0ece?auto=format&fit=crop&w=900&q=85"
+            alt="পেয়ারা গাছ">
+
+            <div class="card-content">
+
+                <span class="tag">Garden Fruit</span>
+
+                <h3>🍐 পেয়ারা গাছ</h3>
+
+                <p>
+                    বাড়ির বাগানের জন্য দারুণ একটি ফলের গাছ।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="plant-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=900&q=85"
+            alt="আতা গাছ">
+
+            <div class="card-content">
+
+                <span class="tag">Desi Fruit</span>
+
+                <h3>🍈 আতা গাছ</h3>
+
+                <p>
+                    মিষ্টি ও সুস্বাদু ফলের একটি পরিচিত গাছ।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="plant-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1603833797135-0b7e7b6d3c4a?auto=format&fit=crop&w=900&q=85"
+            alt="আম গাছ">
+
+            <div class="card-content">
+
+                <span class="tag">Mango</span>
+
+                <h3>🥭 আম গাছ</h3>
+
+                <p>
+                    বাংলার অন্যতম প্রিয় ফলের গাছ।
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FLOWER PLANTS
+========================== -->
+
+<section class="flower-section" id="flowers">
+
+    <div class="section-title">
+
+        <small>Flower Garden</small>
+
+        <h2>🌸 ফুলের গাছ</h2>
+
+        <p>
+            রঙিন ফুলে আমার বাগানকে আরও সুন্দর করে তোলার
+            ছোট্ট চেষ্টা।
+        </p>
+
+    </div>
+
+
+    <div class="plant-grid">
+
+
+        <div class="plant-card flower-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85"
+            alt="গোলাপ">
+
+            <div class="card-content">
+
+                <span class="tag">Flower</span>
+
+                <h3>🌹 গোলাপ</h3>
+
+                <p>
+                    সৌন্দর্য ও সুগন্ধের জন্য বাগানের অন্যতম প্রিয় ফুল।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="plant-card flower-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1470509037663-253afd7f0f51?auto=format&fit=crop&w=900&q=85"
+            alt="সূর্যমুখী">
+
+            <div class="card-content">
+
+                <span class="tag">Flower</span>
+
+                <h3>🌻 সূর্যমুখী</h3>
+
+                <p>
+                    উজ্জ্বল হলুদ রঙের আনন্দময় সূর্যমুখী।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="plant-card flower-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1560717789-0ac7c58ac90a?auto=format&fit=crop&w=900&q=85"
+            alt="জবা">
+
+            <div class="card-content">
+
+                <span class="tag">Flower</span>
+
+                <h3>🌺 জবা</h3>
+
+                <p>
+                    বাগানের পরিচিত ও সুন্দর জবা ফুল।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="plant-card flower-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=900&q=85"
+            alt="গাঁদা ফুল">
+
+            <div class="card-content">
+
+                <span class="tag">Flower</span>
+
+                <h3>🌼 গাঁদা</h3>
+
+                <p>
+                    উজ্জ্বল রঙের জনপ্রিয় বাগানের ফুল।
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INDOOR PLANTS
+========================== -->
+
+<section class="indoor-section" id="indoor">
+
+    <div class="section-title">
+
+        <small>Indoor Collection</small>
+
+        <h2>🪴 Indoor Plants</h2>
+
+        <p>
+            ঘরের ভিতরের পরিবেশকে আরও সবুজ ও সুন্দর করার জন্য
+            কিছু জনপ্রিয় indoor plants।
+        </p>
+
+    </div>
+
+
+    <div class="plant-grid">
+
+
+        <div class="plant-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=900&q=85"
+            alt="মানি প্ল্যান্ট">
+
+            <div class="card-content">
+
+                <span class="tag">Indoor</span>
+
+                <h3>🌿 Money Plant</h3>
+
+                <p>
+                    ঘরের জন্য জনপ্রিয় ও সহজে যত্ন নেওয়া যায়।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="plant-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=900&q=85"
+            alt="স্নেক প্ল্যান্ট">
+
+            <div class="card-content">
+
+                <span class="tag">Indoor</span>
+
+                <h3>🌱 Snake Plant</h3>
+
+                <p>
+                    কম যত্নে বেড়ে ওঠা জনপ্রিয় indoor plant।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="plant-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1593482892290-f54927ae2b7a?auto=format&fit=crop&w=900&q=85"
+            alt="Peace Lily">
+
+            <div class="card-content">
+
+                <span class="tag">Indoor</span>
+
+                <h3>🌿 Peace Lily</h3>
+
+                <p>
+                    সুন্দর পাতা ও ফুলের জন্য ঘরে রাখা যায়।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="plant-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=900&q=85"
+            alt="Areca Palm">
+
+            <div class="card-content">
+
+                <span class="tag">Indoor</span>
+
+                <h3>🌴 Areca Palm</h3>
+
+                <p>
+                    ঘরের পরিবেশে tropical green look তৈরি করে।
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ROOFTOP GARDEN
+========================== -->
+
+<section class="garden">
+
+    <div class="garden-content">
+
+        <h2>🌿 আমার ছোট্ট ছাদ বাগান</h2>
+
+        <p>
+            বড় কোনো জমি নয়—একটা ছোট্ট ছাদ, কিছু টব,
+            একটু মাটি আর অনেকটা ভালোবাসা।
+            এই ছোট্ট জায়গাটাকেই ধীরে ধীরে আমি আমার
+            নিজের Green Heaven বানানোর চেষ্টা করছি।
+        </p>
+
+        <br>
+
+        <p>
+            প্রতিটি নতুন পাতা, প্রতিটি ফুল আর প্রতিটি ফল
+            আমাকে প্রকৃতির আরও কাছে নিয়ে যায়। 🌱
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GARDENING TIPS
+========================== -->
+
+<section class="tips" id="tips">
+
+    <div class="section-title">
+
+        <small>Learn & Grow</small>
+
+        <h2>🌱 Gardening Tips</h2>
+
+        <p>
+            গাছ ভালো রাখতে কিছু সহজ ও দরকারি gardening tips।
+        </p>
+
+    </div>
+
+
+    <div class="tips-grid">
+
+
+        <div class="tip">
+
+            <div class="tip-icon">💧</div>
+
+            <h3>সঠিক জল দেওয়া</h3>
+
+            <p>
+                গাছের প্রয়োজন অনুযায়ী জল দিতে হবে।
+                অতিরিক্ত জল অনেক গাছের শিকড়ের ক্ষতি করতে পারে।
+            </p>
+
+        </div>
+
+
+        <div class="tip">
+
+            <div class="tip-icon">☀️</div>
+
+            <h3>সূর্যের আলো</h3>
+
+            <p>
+                কোন গাছ কতটা আলো পছন্দ করে তা বুঝে
+                সঠিক জায়গায় গাছ রাখতে হবে।
+            </p>
+
+        </div>
+
+
+        <div class="tip">
+
+            <div class="tip-icon">🌱</div>
+
+            <h3>ভালো মাটি</h3>
+
+            <p>
+                পানি নিষ্কাশন ভালো হয় এমন মাটি ব্যবহার করলে
+                গাছের শিকড় সুস্থ থাকে।
+            </p>
+
+        </div>
+
+
+        <div class="tip">
+
+            <div class="tip-icon">✂️</div>
+
+            <h3>Pruning</h3>
+
+            <p>
+                শুকনো ও দুর্বল ডালপালা সময়মতো ছেঁটে দিলে
+                গাছকে সুন্দরভাবে বেড়ে উঠতে সাহায্য করে।
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT ME
+========================== -->
+
+<section class="about" id="about">
+
+    <div class="about-box">
+
+
+        <div class="about-image">
+
+            <img
+            src="https://images.unsplash.com/photo-1592150621744-aca64f48394a?auto=format&fit=crop&w=1000&q=85"
+            alt="সবুজ বাগান">
+
+        </div>
+
+
+        <div class="about-text">
+
+            <h2>❤️ আমার সম্পর্কে</h2>
+
+            <p>
+                আমি <strong>Ashik</strong>। ছোটবেলা থেকেই
+                গাছপালা আর প্রকৃতির প্রতি আমার একটা আলাদা টান আছে।
+            </p>
+
+            <p>
+                আমার কাছে গাছ শুধু একটা গাছ নয়।
+                একটা ছোট্ট চারা যখন ধীরে ধীরে বড় হয়,
+                নতুন পাতা বের হয়, ফুল আসে, তারপর ফল ধরে—
+                সেই পুরো ব্যাপারটাই আমার কাছে ভীষণ আনন্দের।
+            </p>
+
+            <p>
+                তাই আমার ছোট্ট ছাদটাকে আমি ধীরে ধীরে
+                একটি সবুজ পৃথিবীতে পরিণত করার চেষ্টা করছি।
+                এখানে আছে ফলের গাছ, ফুলের গাছ,
+                exotic plants এবং আরও অনেক রকমের সবুজ বন্ধু।
+            </p>
+
+            <div class="heart-text">
+
+                🌿 <strong>Ashik's Green Heaven</strong> আমার কাছে
+                শুধু একটি website বা YouTube channel নয়।
+
+                <br><br>
+
+                এটা আমার গাছপালার প্রতি ভালোবাসা,
+                শেখার গল্প এবং প্রকৃতির সঙ্গে কাটানো
+                ছোট ছোট সুন্দর মুহূর্তগুলোর একটি জায়গা।
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     YOUTUBE
+========================== -->
+
+<section class="youtube">
+
+    <h2>📺 আমার YouTube Channel</h2>
+
+    <p>
+        গাছপালা, ছাদ বাগান, নতুন নতুন plant collection,
+        gardening tips এবং আমার Green Heaven-এর
+        বিভিন্ন ভিডিও দেখতে আমার YouTube channel-এ
+        চলে আসতে পারো।
+    </p>
+
+    <a
+        href="https://www.youtube.com/@ashiktechonologiaandplantlover"
+        target="_blank"
+        class="youtube-btn">
+
+        ▶ YouTube Channel দেখুন
+
+    </a>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <h3>🌿 Ashik's Green Heaven</h3>
+
+    <p>
+        আমার ছোট্ট সবুজ পৃথিবী 🌱
+    </p>
+
+    <div class="footer-line">
+        © 2026 Ashik's Green Heaven | Made with ❤️ & 🌿
+    </div>
+
+</footer>
+
+
+</body>
+</html>
